@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="文章の文字数をリアルタイムでカウントできる無料ツールです。">
+  <title>MojiCount - 文字数カウント</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">MojiCount</h1>
+      <p class="header-label">無料・登録不要</p>
+    </div>
+  </header>
+
+  <!-- メインコンテンツ -->
+  <main class="main container">
+
+    <section class="intro">
+      <h2>文字数カウント</h2>
+      <p>文章を入力するだけで、文字数をリアルタイム集計。</p>
+    </section>
+
+    <!-- 入力エリア -->
+    <section class="editor">
+      <div class="section-heading">
+        <h3>文章を入力</h3>
+        <span>リアルタイム集計</span>
+      </div>
+
+      <textarea
+        id="textInput"
+        placeholder="ここに文章を入力してください..."
+      ></textarea>
+
+      <div class="editor-actions">
+        <button id="copyButton" type="button">コピー</button>
+        <button id="clearButton" type="button">クリア</button>
+      </div>
+    </section>
+
+    <!-- カウント結果 -->
+    <section class="results">
+      <h3>カウント結果</h3>
+
+      <div class="result-grid">
+
+        <div class="result-card">
+          <p>総文字数</p>
+          <strong id="totalCount">0</strong>
+          <span>空白・改行を含む</span>
+        </div>
+
+        <div class="result-card">
+          <p>空白を除く文字数</p>
+          <strong id="noSpaceCount">0</strong>
+          <span>スペース・改行を除く</span>
+        </div>
+
+        <div class="result-card">
+          <p>行数</p>
+          <strong id="lineCount">0</strong>
+        </div>
+
+        <div class="result-card">
+          <p>改行数</p>
+          <strong id="newlineCount">0</strong>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- フッター -->
+  <footer class="footer">
+    <p>© 2026 MojiCount</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
